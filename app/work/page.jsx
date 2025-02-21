@@ -22,13 +22,13 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "KitUp",
     title: "project 1",
-    description: "verujf eeeeeeeee tttttttttt eeeeeeeeeeee sjdknsd",
+    description: "KitUp is a student-centric platform designed to simplify campus life by providing essential resources in one place. With an intuitive interface, KitUp helps students manage their academic and personal needs efficiently.",
     stack: [
-      { name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" },
+      { name: "Express.js" }, { name: "React.js" }, { name: "Node.js" }, { name: "HTML/CSS" }, { name: "Tailwind CSS" },
     ],
-    image: "/assets/crop.png",
+    image: "/assets/kitup1.png",
     live: "",
     github: "",
 
@@ -41,20 +41,20 @@ const projects = [
     stack: [
       { name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" },
     ],
-    image: "/assets/crop.png",
+    image: "/assets/kitup1.png",
     live: "",
     github: "",
 
   },
   {
     num: "03",
-    category: "frontend",
-    title: "project 1",
-    description: "verujf eeeeeeeee tttttttttt eeeeeeeeeeee sjdknsd",
+    category: "Time Table Viewer",
+    title: "Time Table",
+    description: "The College Timetable Viewer is a web application designed to help students easily access their college schedule. It provides real-time class time on which lecture is currently in progress and allows students to view their complete day-wise timetable at a glance.",
     stack: [
-      { name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" },
+      { name: "Javascript" }, { name: "HTML" }, { name: "React (JSX/JS)" },
     ],
-    image: "/assets/crop.png",
+    image: "/assets/tt.png",
     live: "",
     github: "",
 
@@ -67,7 +67,7 @@ const projects = [
     stack: [
       { name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" },
     ],
-    image: "/assets/crop.png",
+    image: "/assets/kitup.png",
     live: "",
     github: "",
 
@@ -103,7 +103,7 @@ const Work = () => {
                 {project.category}
               </h2>
               <p className="text-white/60">{project.description}</p>
-              <ul className="flex gap-4">
+              <ul className="flex flex-wrap gap-4">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">
