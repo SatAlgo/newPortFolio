@@ -1,12 +1,13 @@
 import Link from "next/link";
 
-import { FaGithub, FaLinkedIn, FaYoutube } from "react-icons/fa";
-
+import { FaGithub } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaGlobe } from "react-icons/fa";
 
 const socials = [
-    { icon: <FaGithub />, path: '' },
-    { icon: <FaLinkedIn />, path: '' },
-    { icon: <FaYoutube />, path: '' },
+    { icon: <FaGithub />, path: 'https://github.com/SatAlgo' },
+    { icon: <FaLinkedin />, path: 'https://www.linkedin.com/in/satyam-gaikwad-27a7a724b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+    { icon: <FaGlobe />, path: 'https://satyamgaikwad.netlify.app/' },
 
 ]
 const Social = ({containerStyles, iconStyles}) => {
