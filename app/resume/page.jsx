@@ -163,6 +163,25 @@ const skills = {
   ]
 }
 
+const cprofiles = {
+  title: 'My Coding Profiles',
+  description: "I love problem-solving and competitive programming; it's my passion and a way to sharpen my skills through challenges.",
+  skillList: [
+    { icon: <img src="/assets/codeforces.png" alt="Codeforces" className="w-46 h-46" />, name: "Codeforces" },
+    { icon: <img src="/assets/codechef.png" alt="CodeChef" className="w-46 h-46" />, name: "CodeChef" },
+    { icon: <img src="/assets/g4g.png" alt="GeeksforGeeks" className="w-46 h-46" />, name: "GeeksforGeeks" },
+    { icon: <img src="/assets/LeetCode.png" alt="LeetCode" className="w-46 h-46" />, name: "LeetCode" },
+    { icon: <img src="/assets/codolio.gif" alt="Codolio" className="w-46 h-46" />, name: "Codolio" },
+  ],
+  links: {
+    Codeforces: "https://codeforces.com/profile/satalgo",
+    CodeChef: "https://www.codechef.com/users/explicitcode",
+    GeeksforGeeks: "https://auth.geeksforgeeks.org/user/satyamgainvot",
+    LeetCode: "https://leetcode.com/samalgo",
+    Codolio: "https://codolio.com/profile/Special%20Force"
+  }
+}
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@radix-ui/react-tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -187,6 +206,7 @@ const Resume = () => {
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="cprofiles">Coding Profiles</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
 
@@ -252,14 +272,14 @@ const Resume = () => {
             </TabsContent>
             {/* skills */}
             <TabsContent value="skills" className="w-full">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left ">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                    {skills.description}
-                  </p>
-                  
-                </div>
-                <ScrollArea className="h-[400px] pt-10">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left ">
+                <h3 className="text-4xl font-bold">{skills.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {skills.description}
+                </p>
+
+              </div>
+              <ScrollArea className="h-[400px] pt-10">
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => {
                     return (
@@ -282,25 +302,65 @@ const Resume = () => {
                     )
                   })}
                 </ul>
-                </ScrollArea>
+              </ScrollArea>
             </TabsContent>
+
+            {/* cprofiles */}
+            <TabsContent value="cprofiles" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left ">
+                <h3 className="text-4xl font-bold">{cprofiles.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {cprofiles.description}
+                </p>
+
+              </div>
+              <ScrollArea className="h-[400px] pt-4">
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 xl:gap-[30px]">
+                  {cprofiles.skillList.map((skill, index) => {
+                    return (
+                      <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-[150px] h-[150px] mt-4 rounded-full flex justify-center items-center group">
+                              <a
+                                href={cprofiles.links[skill.name]}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-6xl group-hover:text-accent transition-all duration-300"
+                              >
+                                {skill.icon}
+                              </a>
+                            </TooltipTrigger >
+                            <TooltipContent className="bg-white text-black rounded-md">
+                              <p className="capitalize px-3">{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </ScrollArea>
+            </TabsContent>
+
+
             {/* about */}
             <TabsContent value="about" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
                 <ScrollArea className="h-[400px]">
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px]
+                  <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px]
                 mx-auto xl:mx-0">
-                  {about.info.map((item, index)=>{
-                    return (
-                      <li key={index} className="flex flex-wrap xl:flex-nowrap items-center justify-center xl:justify-start gap-4">
-                        <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl">{item.fieldValue}</span>
-                      </li>
-                    )
-                  })}
-                </ul>
+                    {about.info.map((item, index) => {
+                      return (
+                        <li key={index} className="flex flex-wrap xl:flex-nowrap items-center justify-center xl:justify-start gap-4">
+                          <span className="text-white/60">{item.fieldName}</span>
+                          <span className="text-xl">{item.fieldValue}</span>
+                        </li>
+                      )
+                    })}
+                  </ul>
                 </ScrollArea>
               </div>
             </TabsContent>

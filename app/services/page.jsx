@@ -8,27 +8,22 @@ const services = [
   {
     num: '01',
     title: 'Web Devlopment',
-    description: "My goal is to stay at the forefront of technology, continually learn, and apply my expertise to real-world challenges.",
+    description: "Full-Stack Development (React.js, Next.js, Tailwind CSS, Node.js, Express.js, MongoDB) || Frontend Development (HTML, CSS, JavaScript, React.js) || Backend Development (Node.js, Express.js, API Development) || UI/UX Enhancements (Responsive Design, Dark Mode, Tailwind CSS) || Bug Fixing & Code Optimization",
     href: ""
   },
   {
     num: '02',
-    title: 'Web Devlopment',
-    description: "My goal is to stay at the forefront of technology, continually learn, and apply my expertise to real-world challenges.",
+    title: 'Freelance & Consulting Services',
+    description: "Portfolio Website Development (For Individuals & Startups) || Tech Blogging & Documentation || Website Performance Optimization || Website Development for New Startups || Fixing Presentation Issues (Text Visibility, Correct Padding, UI Improvements)",
     href: ""
   },
   {
     num: '03',
-    title: 'Web Devlopment',
-    description: "My goal is to stay at the forefront of technology, continually learn, and apply my expertise to real-world challenges.",
+    title: 'Academic & Student Support',
+    description: "Project & Assignment Assistance (Web Development, Python, C++, Java) || Automation Scripts for Students (Attendance Management, Form Filling)",
     href: ""
   },
-  {
-    num: '04',
-    title: 'Web Devlopment',
-    description: "My goal is to stay at the forefront of technology, continually learn, and apply my expertise to real-world challenges.",
-    href: ""
-  },
+  
 ];
 
 import { motion } from "framer-motion";
@@ -49,7 +44,7 @@ const Services = () => {
             return (
               <div
                 key={index}
-                className="flex-1 flex flex-col justify-center gap=6 group"
+                className="flex-1 flex flex-col justify-center gap-6 group"
               >
                 {/* top */}
                 <div className="w-full flex justify-between items-center">
@@ -71,8 +66,20 @@ const Services = () => {
                   {service.title}
                 </h2>
                 {/* description */}
-                <p className="text-white/60">{service.description}</p>
-                <div className="border-b border-white/20 w-full"></div>
+                {/* <p className="text-white/60">{service.description}</p>
+                <div className="border-b border-white/20 w-full"></div> */}
+
+                {/* description */}
+<ul className="text-white/60 list-none space-y-2">
+  {service.description.split('||').map((point, index) => (
+    <li key={index} className="flex items-start">
+      <span className="text-lg mr-2 text-accent">•</span> {point}
+    </li>
+  ))}
+</ul>
+<div className="border-b border-white/20 w-full"></div>
+
+
               </div>
             );
           })}
