@@ -59,10 +59,10 @@ const Services = () => {
                   >
                     {service.num}
                   </div>
-                  <Link href={service.href} className="w-[70px] h-[70px] rounded-full
+                  <Link href={service.href} className="w-[40px] h-[40px] rounded-full
                   bg-white group-hover:bg-accent transition-all duration-500 flex
                   justify-center items-center hover:-rotate-45">
-                    <BsArrowDownRight className="text-primary text-3xl" />
+                    <BsArrowDownRight className="text-primary text-2xl" />
                   </Link>
                 </div>
                 {/* title */}

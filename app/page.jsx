@@ -16,7 +16,7 @@ const Home = () => {
             <div className="xl:pb-4"><span className="text-xl">Computer Engineer</span></div>
             <h1 className="h2 mb-3 max-w-[800px]">Hello I'm <br /> <span className="text-accent">Satyam Gaikwad</span></h1>
             <p className="max-w-[700px] mb-8 text-white/80">
-            A second-year B-Tech Computer Engineering student with a strong foundation in C++, Python, and Java. Passionate about web development and data structures, I thrive on solving real-world challenges and contributing to innovative projects.
+              A second-year B-Tech Computer Engineering student with a strong foundation in C++, Python, and Java. Passionate about web development and data structures, I thrive on solving real-world challenges and contributing to innovative projects.
             </p>
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -25,7 +25,9 @@ const Home = () => {
                 size="lg"
                 className="uppercase flex items-center gap-2 p-5"
               >
-                <span>Download CV</span>
+                <a href="https://1drv.ms/w/c/fc1755c51a0b0c9f/EZ8MCxrFVRcggPz1AgAAAAABYeTDLPuVtOxjD0CwBZBKgA" download>
+                  <span>Download CV</span>
+                </a>
                 <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 xl:mb-0">

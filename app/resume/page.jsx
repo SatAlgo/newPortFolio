@@ -294,7 +294,7 @@ const Resume = () => {
                 mx-auto xl:mx-0">
                   {about.info.map((item, index)=>{
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <li key={index} className="flex flex-wrap xl:flex-nowrap items-center justify-center xl:justify-start gap-4">
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>
                       </li>
