@@ -18,19 +18,27 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const info = [
   {
-    icon: <FaPhoneAlt />,
+    icon: (
+      <a href="tel:7822099563" className="text-accent">
+        <FaPhoneAlt />
+      </a>
+    ),
     title: "Phone",
     description: "7822099563",
   },
   {
-    icon: <FaEnvelope />,
+    icon: (
+      <a href="mailto:satyam.m.gaikwad@gmail.com">
+        <FaEnvelope />
+      </a>
+    ), // Email icon wrapped in <a> tag
     title: "Email",
     description: "satyam.m.gaikwad@gmail.com",
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "7822099563",
+    description: "Pune, Maharashtra",
   },
 ];
 

@@ -29,8 +29,8 @@ const projects = [
       { name: "Express.js" }, { name: "React.js" }, { name: "Node.js" }, { name: "HTML/CSS" }, { name: "Tailwind CSS" },
     ],
     image: "/assets/kitup1.png",
-    live: "",
-    github: "",
+    live: "http://kitup.netlify.app/",
+    github: "https://github.com/SatAlgo/SetUp",
 
   },
   {
@@ -55,8 +55,8 @@ const projects = [
       { name: "Javascript" }, { name: "HTML" }, { name: "React (JSX/JS)" },
     ],
     image: "/assets/tt.png",
-    live: "",
-    github: "",
+    live: "https://kitup.netlify.app/TT",
+    github: "https://github.com/SatAlgo/SetUp",
 
   },
   {
