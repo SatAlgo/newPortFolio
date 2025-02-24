@@ -17,7 +17,7 @@ const stats = [
     },
     {
         num: 700,
-        text: "DSA Problems Solved ",
+        text: "DSA Problems Solved",
     },
 ];
 

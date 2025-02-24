@@ -70,8 +70,9 @@ const Contact = () => {
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
                     <SelectItem value="est">Web Devlopment</SelectItem>
-                    <SelectItem value="cst">Web Devlopment</SelectItem>
-                    <SelectItem value="mst">Web Devlopment</SelectItem>
+                    <SelectItem value="cst">Freelance & Consulting Services</SelectItem>
+                    <SelectItem value="mst">Academic & Student Support</SelectItem>
+                    <SelectItem value="mst">Other</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
